@@ -1,0 +1,110 @@
+/*
+ Theme Name:   Kindling Child
+ Theme URI:    https://example.com/
+ Description:  Child theme for the Kindling theme
+ Author:       Your Name
+ Author URI:   https://example.com
+ Template:     kindling
+ Version:      1.0.0
+*/
+
+/* Import parent theme styles */
+@import url("../kindling/style.css");
+
+.site-content {
+  max-width: none; 
+}
+
+
+.wp-block-group.alignfull,
+.wp-block-cover.alignfull,
+.wp-block-columns.alignfull {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+}
+
+
+/* Full-width section */
+.stats-section.alignfull {
+  background-color: #063B26;
+  color: #fff;
+  padding: 60px 20px;
+  margin: 0; 
+  width: 100%;
+  max-width: 100% !important; 
+}
+
+/* Force counters inside stats section to be white */
+.stats-section .stat h2.counter {
+  color: #fff !important;
+}
+
+.stat h2.counter,
+.stat .suffix {
+  display: inline;        
+  white-space: nowrap; 
+  vertical-align: baseline;   
+}
+
+
+/* Grid layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px; 
+  margin: 0 auto;
+  text-align: center;
+}
+
+section.stats-section .stats-grid .stat h2.counter {
+  color: #ffffff !important;
+}
+
+
+/* Counter styles */
+.stat h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.stat p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Scroll-to-top button */
+#scrollTopBtn {
+  position: fixed;           /* makes it stick to screen */
+  bottom: 30px;              /* distance from bottom */
+  right: 30px;               /* distance from right */
+  width: 60px;
+  height: 60px;
+  background-color: #063B26; /* your green */
+  color: #fff;               /* white arrow */
+  border-radius: 50%;        /* circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;  
+  text-transform: capitalize;
+  transition: 0.4s ease-in-out !important;
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+

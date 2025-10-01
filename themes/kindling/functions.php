@@ -125,6 +125,17 @@ function kindling_editor_assets()
 }
 add_action('enqueue_block_editor_assets', 'kindling_editor_assets');
 
+function mytheme_enqueue_fonts() {
+  wp_enqueue_style(
+      'mytheme-inter-font',
+      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap',
+      array(),
+      null
+  );
+}
+add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_fonts' );
+
+
 // Helpers.
 require_once get_theme_file_path('inc/helpers.php');
 
