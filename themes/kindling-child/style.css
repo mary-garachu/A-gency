@@ -74,16 +74,15 @@ section.stats-section .stats-grid .stat h2.counter {
   font-size: 1.2rem;
 }
 
-/* Scroll-to-top button */
 #scrollTopBtn {
-  position: fixed;           /* makes it stick to screen */
-  bottom: 30px;              /* distance from bottom */
-  right: 30px;               /* distance from right */
+  position: fixed; 
+  bottom: 30px; 
+  right: 30px; 
   width: 60px;
   height: 60px;
-  background-color: #063B26; /* your green */
-  color: #fff;               /* white arrow */
-  border-radius: 50%;        /* circle */
+  background-color: #063B26; 
+  color: #fff; 
+  border-radius: 50%;   
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,6 +103,58 @@ section.stats-section .stats-grid .stat h2.counter {
   visibility: visible;
 }
 
+/* Apply this class to the parent Columns block in the editor: two-row-columns */
+
+/* Style each cover block */
+.two-row-columns .wp-block-cover {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+/* Smooth image zoom */
+.two-row-columns .wp-block-cover img {
+  transition: transform 0.6s ease, filter 0.6s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Paragraph overlay text */
+.two-row-columns .wp-block-cover a {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: transparent; /* hidden initially */
+  font-size: 40px;
+  font-weight: 600;
+  transition: color 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+/* Hover animations */
+.two-row-columns .wp-block-cover:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.9);
+}
+
+.two-row-columns .wp-block-cover:hover a {
+  color: #cfff92;; /* your theme green */
+  transform: translateY(0);
+  opacity: 2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Optional: subtle lift */
+.two-row-columns .wp-block-cover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.12);
+}
 
 
 
